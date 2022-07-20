@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#ifdef LOCAL
+#define debug(var) cerr << (#var) << " = " << (var) << endl;
+#else
+#define debug(var)
+#endif
+
+void init() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+}
+
+void solve() {
+    int c[3][3];
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            scanf("%d", c[i]+j);
+        }
+    }
+    for (int i = 1; i < 3; ++i) {
+        for (int j = 1; j < 3; ++j) {
+            if (c[i][j]-c[i][j-1] != c[0][j]-c[0][j-1]) {
+                puts("No");
+                return;
+            }
+        }
+    }
+    puts("Yes");
+}
+
+int main() {
+    init();
+    int t = 1; //scanf("%d", &t);
+    while (t--) {
+        solve();
+    }
+    return 0;
+}

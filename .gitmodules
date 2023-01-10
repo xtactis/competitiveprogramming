@@ -1,0 +1,3 @@
+[submodule "AoC"]
+	path = AoC
+	url = git@github.com:xtactis/AoC.git
